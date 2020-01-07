@@ -4,7 +4,13 @@ $dagenVanWeek = array ("Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag",
 
 $dagnummer = $_POST["num"];
 $dagnaam = $dagenVanWeek[$dagnummer-1];
-echo $dagnaam;
+if($dagnummer < 8){
+    echo $dagnaam;
+}
+else {
+    echo "Niet geldeg";
+}
+
 
 
 ?>
