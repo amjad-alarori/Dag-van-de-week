@@ -9,6 +9,7 @@ if($dagnummer < 8){
 }
 else {
     echo "Niet geldig";
+exit;
 }
 
 
