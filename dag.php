@@ -8,7 +8,7 @@ if($dagnummer < 8){
     echo $dagnaam;
 }
 else {
-    echo "Niet geldeg";
+    echo "Niet geldig";
 }
 
 
