@@ -1,17 +1,29 @@
 <?php
 
-$dagenVanWeek = array ("Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag");
 
-$dagnummer = $_POST["num"];
-$dagnaam = $dagenVanWeek[$dagnummer-1];
-if($dagnummer < 8){
-    echo $dagnaam;
-}
-else {
-    echo "Niet geldig";
-exit;
+
+
+$dagenVanWeek = array("Maandag" => 1, "Dinsdag" => 2, "Woensdag" => 3, "Donderdag" => 4, "Vrijdag" => 5, "Zaterdag" => 6, "Zondag" => 7);
+
+$dagnummer = (int) $_POST["num"];
+
+
+function countdag($dagenVanWeek, $dagnummer) {
+    foreach ($dagenVanWeek as $dagnaam => $dagvalue) {
+        if ($dagnummer == $dagvalue) {
+            return $dagnaam;
+        }
+    }
+    if ($dagnummer > $dagvalue) {
+        return "Niet geldig";
+    }
+    elseif ($dagnummer < $dagvalue) {
+        return "Niet geldig";
+    }
 }
 
+echo countdag($dagenVanWeek, $dagnummer);
 
 
 ?>
+
